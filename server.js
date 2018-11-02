@@ -15,10 +15,11 @@ app.use(bodyParser.json());
 //uses static files from public folder
 app.use(express.static('public'));
 
-  //import routes
+  //import route
   var routing = require('./controllers/burgerController.js');
   app.use(routing);
 
+  //listneing to port
 app.listen(PORT, () => {
     // connecting to server
     console.log("Server listening on: http://localhost:" + PORT);

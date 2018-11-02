@@ -2,7 +2,7 @@
 var express = require('express');
 
 //finding route for burgers.js
-var burgers = require('../models/burger.js')
+var burgers = require('../models/burgerModels.js')
 
 //routing for server
 var router = express.Router();
