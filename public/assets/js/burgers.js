@@ -17,7 +17,7 @@ function displayPg(){
   );
 }
 
-function renderTemplate(){
+function renderTemplate(data){
     var source = $("#pg-templage").text();
     var template= Handlebars.compile(source);
     var html = template(data);

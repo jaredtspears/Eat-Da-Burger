@@ -1,6 +1,7 @@
 //vars
 var express= require('express');
 var bodyParser= require('body-parser');
+var path = require('path');
 
 //express app
 var app = express();
@@ -12,8 +13,8 @@ var PORT = process.env.PORT || 8080;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-//uses static files from public folder
-app.use(express.static('public'));
+//uses static files from public folder. joining file path
+app.use(express.static(path.join(__dirname + '/public')));
 
   //import route
   var routing = require('./controllers/burgerController.js');

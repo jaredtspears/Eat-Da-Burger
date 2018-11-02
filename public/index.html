@@ -7,17 +7,21 @@
     <title>Eat-Da-Burger</title>
     <!-- css -->
     <link rel="stylesheet" href="assets/css/style.css">
+   <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!-- semantic -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
     <!-- handlebars -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
-
+  
+    <script src="./assets/js/burgers.js"></script>
+  
 <!-- handlebar script -->
 <script id="page-template" type="text/x-handlebars-template">
   <h1>Burger Que Up On Deck:</h1>
   <ul>
     {{#each burgers}}
-      {{#unless eatDaBurgers}}
+      {{#unless burger_name}}
         <li>{{burger_name}}
           <button class="eatBurger" data-is={{id}}></button>
         </li>
@@ -27,7 +31,7 @@
 
   <h1>Eaten</h1>
     {{#each burgers}}
-      {{#if eatDaBurgers}}
+      {{#if eatEmUp}}
           <li>{{burger_name}}</li>
       {{/if}}
     {{/each}}
@@ -56,18 +60,18 @@
 
 
 
-    <!-- =====This was just dummy html for testing alignments =======-->
+    <!-- =====This was just dummy html for testing alignments =======
  <div class="ui container center aligned">
-<!-- will have burger image here -->
-<img id="gif" src="https://media.giphy.com/media/IgOEWPOgK6uVa/giphy.gif" alt="Patrick Eating Burgers">
-</div>   
+will have burger image here -->
+<!-- <img id="gif" src="https://media.giphy.com/media/IgOEWPOgK6uVa/giphy.gif" alt="Patrick Eating Burgers"> -->
+<!-- </div>    -->
 <!-- container is a segment floating in the center of the page -->
-<div class="ui inverted raised very padded text container segment">
-<!-- h1 for title -->
+<!-- <div class="ui inverted raised very padded text container segment"> -->
+<!-- h1 for title
 <h1>Eat-Da-Burger</h1>
 
 <br><br><hr><br>
-<!-- insert form field here for inputting data to be displayed -->
+ insert form field here for inputting data to be displayed
 <div class="ui inverted segment">
     <div class="ui inverted form">
         <div class="field">
@@ -76,7 +80,7 @@
         </div>
       <div class="ui submit button" id ='submit'>Submit</div>
     </div>
-  </div>
+  </div> -->
 <!-- ===================end of dummy html ================== -->
 
 <br>
