@@ -8,6 +8,7 @@ var connection = mysql.createConnection({
   database: "EDB_db"
 });
 
+//connect EDB_DB
 connection.connect(function(err) {
   if (err) {
     console.error("error connecting: " + err.stack);
@@ -16,4 +17,5 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 });
 
+//export for ORM 
 module.exports = connection;
