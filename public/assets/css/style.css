@@ -9,3 +9,15 @@
 body {
     color :whitesmoke;
 }
+
+h1, h3, label, input, .container, p, ul, li{
+    font-family: 'Fredoka One', cursive;
+    color: rgb(111, 163, 111);
+}
+
+#inverted {
+    color: whitesmoke;
+    font-family: 'Fredoka One', cursive;
+    border:black;
+    border-width: 1px;
+}

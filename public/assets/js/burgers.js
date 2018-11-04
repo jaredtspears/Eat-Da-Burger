@@ -27,10 +27,22 @@ function renderTemplate(data){
 function eventHandlers(){
     $(document).on('submit', '.create-form', function(e) {
         event.preventDefault();
-        var newBurger= {
-            burger_name: $('#burgerName').val().trim(),
-            eatDaBurger: $('[name=eatDaBurger]').val().trim()
+    
+        var test = $('#burgerName').val().trim();
+        var test2 = $('[name=eatDaBurgers]:checked').val().trim();
+        var checked;
+        
+        if(test2 == 1){
+            checked=true;
+        }else{
+            checked=false;
         }
+        console.log(checked);
+        var newBurger= {
+            burger_name: test,
+            eatEmUp: checked,
+        }
+        
         console.log('newBurger', newBurger);
         $.ajax('/api/burgers',
         {
@@ -42,18 +54,19 @@ function eventHandlers(){
             }
         )
     });
-    $(document).on('click', '.eatBurger', function (e) {
+    $(document).on('click', '#stateChange', function (e) {
         event.preventDefault();
         var status = {
-          eatDaBurgers: true
+          eatEmUp: true
         }
         $.ajax('/api/burgers',
       {
         type: 'PUT',
         data: status
-      }).then(
+      })
+      .then(
         function () {
-          displayPage();
+          displayPg();
         }
       )
        });

@@ -7,6 +7,8 @@
     <title>Eat-Da-Burger</title>
     <!-- css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
    <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!-- semantic -->
@@ -25,18 +27,18 @@
       <!-- container is a segment floating in the center of the page -->
       <div class="ui inverted raised very padded text container segment">
 
-  <h1>Burger Que Up On Deck:</h1>
+  <h1 id="inverted">Burger Que, What's Up On Deck:</h1>
   <ul>
     {{#each burgers}}
-      {{#unless burger_name}}
+      {{#unless eatEmUp}}
         <li>{{burger_name}}
-          <button class="eatBurger" data-is={{id}}></button>
+          <button class=" ui inverted black button eatBurger" id = "stateChange" data-is={{id}}>Eat Burger</button>
         </li>
       {{/unless}}
     {{/each}}
   </ul>
 
-  <h1>Eaten</h1>
+  <h1 id="inverted">Eaten:</h1>
     {{#each burgers}}
       {{#if eatEmUp}}
           <li>{{burger_name}}</li>
@@ -44,21 +46,25 @@
     {{/each}}
   </ul>
 
-  <h3>Insert a new Burger for your customizable menu:</h3>
+  <h3 id="inverted">Insert a new Burger for your customizable menu:</h3>
 
   <form class="create-form">
       <div class="form-group">
-          <label for="burgerName">Burger Name:</label>
-          <input placeholder="Slammin' Hamburger" type="text" id="burgerName" name="name">
-      </div>
+          <label for="burgerName" id="inverted">Burger Name:</label>
+          <div class="ui inverted input" id="inverted">
+            <input placeholder="Slammin' Hamburger" type="text" id="burgerName" name="name">
+          </div>
+        </div>
 
       <div class="form-group">
           <label for="eatDaBurgers">Did You Eat it?</label><br>
-          <input type="radio" name="eatEmUp" value="1" checked> Yes<br>
-          <input type="radio" name="eatEmUp" value="0"> No
+          <div class="ui inverted input" id="inverted">
+            <input type="radio" name="eatDaBurgers" value="1" checked> Yes<br>
+            <input type="radio" name="eatDaBurgers" value="0"> No
+          </div>
       </div>
 
-      <button id="submitButton" type="submit">Add a Burger</button>
+      <button class = "ui inverted grey button" id="submitButton" type="submit">Add a Burger</button>
   </form>
 </div>
 </script>

@@ -17,8 +17,14 @@ router.get('/api/burgers', (req, res) =>{
 
 //posting 
 router.post("/api/burgers", (req, res) =>{
+    
+    var eatEmUp;
+    if (req.body.eatEmUp == "true"){
+        eatEmUp= true;
+    }else{eatEmUp=false}
+
     burgers.create(["burger_name", "eatEmUp"], 
-    [req.body.burger_name, req.body.eatEmUp], 
+    [req.body.burger_name, eatEmUp], 
       function(result) {
       // Send back the ID of the new quote
         res.json({ id: result.insertId });
@@ -26,5 +32,10 @@ router.post("/api/burgers", (req, res) =>{
       }
     );
   });
+
+  router.put("/api/burgers", (req, res) =>{
+      console.log(req.body);
+    //   burgers.update()
+  })
 
 module.exports = router;
