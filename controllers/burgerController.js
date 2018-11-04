@@ -26,12 +26,5 @@ router.post("/api/burgers", (req, res) =>{
       }
     );
   });
-//   router.put('/api/burgers/:id', (req, res) =>{
-//     console.log('req.body', req.body);
-//     burgers.update({
-//         eatDaBurger: req.body.eatDaBurger
-//     }, 
-//     //all good status end program
-//     // res.status(200).end(),
-//   })
+
 module.exports = router;

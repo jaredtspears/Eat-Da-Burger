@@ -17,7 +17,14 @@
     <script src="./assets/js/burgers.js"></script>
   
 <!-- handlebar script -->
-<script id="page-template" type="text/x-handlebars-template">
+<script id="pg-template" type="text/x-handlebars-template">
+ 
+  <div class="ui container center aligned">
+      <img id="gif" src="https://media.giphy.com/media/IgOEWPOgK6uVa/giphy.gif" alt="Patrick Eating Burgers">
+      </div>   
+      <!-- container is a segment floating in the center of the page -->
+      <div class="ui inverted raised very padded text container segment">
+
   <h1>Burger Que Up On Deck:</h1>
   <ul>
     {{#each burgers}}
@@ -42,17 +49,18 @@
   <form class="create-form">
       <div class="form-group">
           <label for="burgerName">Burger Name:</label>
-          <input type="text" id="burgerName" name="name">
+          <input placeholder="Slammin' Hamburger" type="text" id="burgerName" name="name">
       </div>
 
       <div class="form-group">
           <label for="eatDaBurgers">Did You Eat it?</label><br>
-          <input type="radio" name="devoured" value="1" checked> Yes<br>
-          <input type="radio" name="devoured" value="0"> No
+          <input type="radio" name="eatEmUp" value="1" checked> Yes<br>
+          <input type="radio" name="eatEmUp" value="0"> No
       </div>
 
       <button id="submitButton" type="submit">Add a Burger</button>
   </form>
+</div>
 </script>
 </head>
 <body id="background">
@@ -60,13 +68,7 @@
 
 
 
-    <!-- =====This was just dummy html for testing alignments =======
- <div class="ui container center aligned">
-will have burger image here -->
-<!-- <img id="gif" src="https://media.giphy.com/media/IgOEWPOgK6uVa/giphy.gif" alt="Patrick Eating Burgers"> -->
-<!-- </div>    -->
-<!-- container is a segment floating in the center of the page -->
-<!-- <div class="ui inverted raised very padded text container segment"> -->
+
 <!-- h1 for title
 <h1>Eat-Da-Burger</h1>
 

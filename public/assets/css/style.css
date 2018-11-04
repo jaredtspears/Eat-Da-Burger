@@ -3,5 +3,9 @@
 }
 
 #background{
-    background-color: black;
+    background-color: gray;
+}
+
+body {
+    color :whitesmoke;
 }

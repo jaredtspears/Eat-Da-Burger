@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 //uses static files from public folder. joining file path
 app.use(express.static(path.join(__dirname + '/public')));
-
+console.log(path.join(__dirname + '/public'));
   //import route
   var routing = require('./controllers/burgerController.js');
   app.use(routing);

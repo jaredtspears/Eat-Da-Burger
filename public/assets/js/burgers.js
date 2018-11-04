@@ -18,7 +18,7 @@ function displayPg(){
 }
 
 function renderTemplate(data){
-    var source = $("#pg-templage").text();
+    var source = $("#pg-template").text();
     var template= Handlebars.compile(source);
     var html = template(data);
     $("#app").html(html);
